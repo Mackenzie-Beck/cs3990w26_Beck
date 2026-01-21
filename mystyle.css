@@ -2,7 +2,9 @@ dl{
     text-align: justify;
 }
 
-
+p{
+    line-height: 30px;
+}
 #page1 .image_with_border{
     border: 3px solid grey
 }
