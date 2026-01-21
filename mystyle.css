@@ -2,6 +2,13 @@ dl{
     text-align: justify;
 }
 
+p {
+    text-indent: 30px;
+}
+
+.second-paragraph{
+    text-indent: 0px;
+}
 
 #page1 .image_with_border{
     border: 3px solid grey
