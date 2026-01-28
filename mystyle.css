@@ -42,7 +42,19 @@ body {
 }
 
 
+.even-todo {
+    background-color: #cc99ff;
+}
 
+.odd-todo {
+    background-color: #cc66ff;
+}
+
+
+.done-todo{
+    background-color: gray;
+    text-decoration: line-through;
+}
 
 .rounded-bubble {
 
