@@ -14,10 +14,30 @@ div {
 }
 
 
-article .task1 > div {
-    color: rgb(245, 201, 147);
+
+
+.task1 {
+    position: relative;
+    padding: 20px;
 }
 
+.task1 > div {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    background: orange;
+    color: black;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 8px;
+    top: -50px;
+    transition: opacity 0.3s;
+}
+
+.task1:hover > div {
+    visibility: visible;
+    opacity: 1;
+}
 
 article div:hover:not(.task1 > div){
     border: 4px red solid;
