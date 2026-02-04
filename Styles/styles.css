@@ -62,12 +62,16 @@ article div:hover:not(.task1 > div){
     border: 4px red solid;
 }
 
-article div:hover ~ div:not(:hover), article div:not(:hover):has(~ div:hover) {
+article div:hover ~ div:not(:hover), article div:not(:hover):has(~ div:hover)  {
     opacity: 0.3;
 }
 
-article + article div:hover:not(.task1 > div) { 
+article + article div:hover:not(.task1 > div) {
     border: 4px pink dotted;
+}
+
+article + article .task3 > div:hover {
+    border: none !important;
 }
 
 /* part1 task2*/
@@ -179,4 +183,8 @@ article + article .correct::before {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 3em;
+}
+
+article + article .task3 div:hover {
+    background-color: coral;
 }
