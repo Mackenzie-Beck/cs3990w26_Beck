@@ -51,6 +51,25 @@ article + article div:hover {
     border: 4px pink dotted;
 }
 
+/* part1 task2*/
+
+article li:not(.special) {
+    color: crimson;
+    width: fit-content;
+}
+
+article li:nth-child(1) {
+    background-color: brown;
+}
+
+article li:nth-child(4) {
+    font-style: italic;
+}
+
+article li:nth-child(odd) {
+    font-weight: bold;
+}
+
 
 article + article {
     background-color: rgb(245, 201, 147);
