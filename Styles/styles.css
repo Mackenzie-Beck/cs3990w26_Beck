@@ -113,9 +113,7 @@ blockquote {
     padding-top: 50px;
 }
 
-article + article blockquote:hover {
-    background-color: aliceblue;
-}
+
 
 .task1:has(blockquote:hover) h4 {
     color: orangered;
