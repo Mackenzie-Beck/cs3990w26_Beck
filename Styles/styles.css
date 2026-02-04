@@ -155,3 +155,9 @@ article + article .task2 ul li{
 article +article .task2 ul li:nth-child(even)::marker{
     content: "\1F600";
 }
+
+/* part 2 task 3*/
+
+article + article .task3 span:nth-of-type(1)::before {
+    content: ">>/ ";
+}
