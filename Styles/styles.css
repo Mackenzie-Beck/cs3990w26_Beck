@@ -39,6 +39,25 @@ div {
     opacity: 1;
 }
 
+
+article + article {
+    background-color: rgb(245, 201, 147);
+}
+
+article + article h2{
+    color: rgb(66, 37, 2);
+    font-style: italic;
+}
+
+article + article div {
+    color: rgb(245, 201, 147);
+    background-color:  rgb(66, 37, 2);
+}
+
+article + article h4 {
+    font-weight: bold;
+}
+
 article div:hover:not(.task1 > div){
     border: 4px red solid;
 }
@@ -47,7 +66,7 @@ article div:hover ~ div:not(:hover), article div:not(:hover):has(~ div:hover) {
     opacity: 0.3;
 }
 
-article + article div:hover {
+article + article div:hover:not(.task1 > div) { 
     border: 4px pink dotted;
 }
 
@@ -86,10 +105,20 @@ blockquote::before {
     font-size: 2em;
     color: #333;
 }
-
+blockquote:hover::before {
+    background-color: orangered;
+}
 blockquote {
     max-width: 800px;
     padding-top: 50px;
+}
+
+article + article blockquote:hover {
+    background-color: aliceblue;
+}
+
+.task1:has(blockquote:hover) h4 {
+    color: orangered;
 }
 
 
@@ -111,20 +140,6 @@ blockquote::after {
     color: #333;
 }
 
-article + article {
-    background-color: rgb(245, 201, 147);
-}
-
-article + article h2{
-    color: rgb(66, 37, 2);
-    font-style: italic;
-}
-
-article + article div {
-    color: rgb(245, 201, 147);
-    background-color:  rgb(66, 37, 2);
-}
-
-article + article h4 {
-    font-weight: bold;
+blockquote:hover::after {
+    background-color: orangered;
 }
