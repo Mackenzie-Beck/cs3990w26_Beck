@@ -69,7 +69,47 @@ article li:nth-child(4) {
 article li:nth-child(odd) {
     font-weight: bold;
 }
+/* part2 task1*/
 
+blockquote::before {
+    content: "\201C"; /* " */
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-color: orange;
+    border-radius: 50%;
+    
+    
+
+    text-align: center;
+    line-height: 60px;
+    font-size: 2em;
+    color: #333;
+}
+
+blockquote {
+    max-width: 800px;
+    padding-top: 50px;
+}
+
+
+blockquote::after {
+    content: "\201D";
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-color: orange;
+    border-radius: 50%;
+    position: absolute;
+    left: 850px;
+
+    
+
+    text-align: center;
+    line-height: 60px;
+    font-size: 2em;
+    color: #333;
+}
 
 article + article {
     background-color: rgb(245, 201, 147);
