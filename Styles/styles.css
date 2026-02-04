@@ -163,7 +163,10 @@ article +article .task2 ul li:nth-child(even)::marker{
 /* part 2 task 3*/
 
 article + article .task3 span:nth-of-type(1)::before {
-    content: ">>/ ";
+    content: ">>";
+}
+article + article .task3 span:nth-of-type(1)::after {
+    content: "/ ";
 }
 
 article + article .wrong::before {
