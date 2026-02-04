@@ -164,7 +164,7 @@ article + article .task3 span:nth-of-type(1)::before {
 
 article + article .wrong::before {
     content: "❌";
-     position: relative;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -172,5 +172,11 @@ article + article .wrong::before {
 }
 
 article + article .correct::before { 
-    
+    content: "✓";
+    color: green;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
 }
