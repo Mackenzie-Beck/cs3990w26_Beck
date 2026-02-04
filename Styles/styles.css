@@ -1,0 +1,51 @@
+article {
+    background-color:  rgb(66, 37, 2);
+}
+
+h2 {
+    color: rgb(245, 201, 147);
+    font-style: italic;
+}
+
+div {
+    background-color: rgb(245, 201, 147);
+    margin: 10px;
+    color: rgb(66, 37, 2);
+}
+
+
+article .task1 > div {
+    color: rgb(245, 201, 147);
+}
+
+
+article div:hover:not(.task1 > div){
+    border: 4px red solid;
+}
+
+article div:hover ~ div:not(:hover), article div:not(:hover):has(~ div:hover) {
+    opacity: 0.3;
+}
+
+article + article div:hover {
+    border: 4px pink dotted;
+}
+
+
+article + article {
+    background-color: rgb(245, 201, 147);
+}
+
+article + article h2{
+    color: rgb(66, 37, 2);
+    font-style: italic;
+}
+
+article + article div {
+    color: rgb(245, 201, 147);
+    background-color:  rgb(66, 37, 2);
+}
+
+article + article h4 {
+    font-weight: bold;
+}
