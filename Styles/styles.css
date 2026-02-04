@@ -141,3 +141,17 @@ blockquote::after {
 blockquote:hover::after {
     background-color: orangered;
 }
+
+/* part2 task2*/
+
+article + article .task2 ul li{
+    color: rgb(245, 201, 147);
+    background-color: rgb(66, 37, 2);
+    font-weight: 100;
+    font-style: normal;
+
+}
+
+article +article .task2 ul li:nth-child(even)::marker{
+    content: "\1F600";
+}
