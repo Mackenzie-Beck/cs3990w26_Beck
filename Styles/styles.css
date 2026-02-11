@@ -66,7 +66,9 @@ input{
     font-size: large;
 }
 
-.tab:active{
+#tab1:checked ~ form label[for="tab1"],
+#tab2:checked ~ form label[for="tab2"],
+#tab3:checked ~ form label[for="tab3"] {
     color: white;
     font-size: larger;
     font-weight: bold;
