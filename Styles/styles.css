@@ -74,7 +74,14 @@ input{
 }
 
 /* Hide all content divs by default */
-#content > div {
+#content > div:not(#default) {
+  display: none;
+}
+
+/* Hide default when any tab is checked */
+#tab1:checked ~ #content #default,
+#tab2:checked ~ #content #default,
+#tab3:checked ~ #content #default {
   display: none;
 }
 
@@ -93,4 +100,24 @@ input{
 #center-panel{
     display: flex;
     flex-direction: column;
+}
+
+
+#content p, #content h1{
+    color: #660066;
+}
+
+.province-item {
+    display: flex;
+    align-items: center; /* Vertically centers the image with the text */
+    gap: 10px; /* Adds space between image and text */
+    margin-bottom: 10px; /* Space between rows */
+}
+
+.province-item img {
+    width: 5%; /* Or use a fixed size like 50px for consistency */
+}
+
+.province-item p {
+    margin: 0; /* Removes default paragraph margins */
 }
