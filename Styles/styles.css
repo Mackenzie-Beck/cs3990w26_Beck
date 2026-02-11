@@ -32,6 +32,7 @@ body{
 #facts-panel{
     display: flex;
     flex-direction: column;
+    min-width: 20%;
 }
 
 #facts-panel div{
@@ -180,3 +181,46 @@ input{
     display: block;
 }
 
+
+
+#jobs-panel {
+    background-color: rgb(148, 29, 148);
+    color: white;
+    min-width: 20%;
+}
+
+#jobs-panel > div {
+    display: flex;
+    flex-direction: row;
+    margin: 15px;
+}
+
+.card{
+    background-color: darkmagenta;
+    border: double blue 4px;
+    border-top-right-radius: 30px;
+    width: 50%;
+}
+
+#cybersecurity-card h5{
+    background-color: brown;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: inline-block;
+    padding-right: 10px;
+
+}
+
+#technician-card h5,
+#senior-card h5{
+    background-color: greenyellow;
+        border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding-right: 10px;
+}
+
+@media (max-width: 768px) {
+    #jobs-panel {
+        flex-direction: column;
+    }
+}
