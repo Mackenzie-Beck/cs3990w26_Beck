@@ -33,6 +33,7 @@ body{
     display: flex;
     flex-direction: column;
     min-width: 20%;
+    
 }
 
 #facts-panel div{
@@ -187,6 +188,7 @@ input{
     background-color: rgb(148, 29, 148);
     color: white;
     min-width: 20%;
+    max-width: 30%;
 }
 
 #jobs-panel > #left-col,
