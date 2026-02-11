@@ -1,0 +1,74 @@
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 100vh;
+}
+
+#header{
+    background-color: purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed; top: 0; width: 100% ;
+    height: 10%;
+    color: white;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+
+#main-content{
+    display: flex;
+    flex-direction: row;
+    margin-top:10vh ;
+}
+@media (max-width: 768px) {
+    #main-content {
+        flex-direction: column;
+    }
+}
+
+#facts-panel{
+    display: flex;
+    flex-direction: column;
+}
+
+#facts-panel div{
+    background-color: #cc00cc;
+    margin: 5px;
+    color: white;
+}
+
+#tab-menu{
+    display: flex;
+    flex-direction: column;
+}
+#buttons{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.tab{
+    margin: 10px;
+    border: white solid 1px;
+    background-color: #cc00cc;
+    border-radius: 10px;
+    box-shadow: 3px 5px 5px;
+    color: #660066;
+    font-style: italic;
+    font-size: large;
+}
+
+.tab:active{
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    box-shadow: none;
+}
+
+#center-panel{
+    display: flex;
+    flex-direction: column;
+}
