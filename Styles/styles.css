@@ -71,7 +71,19 @@ input{
     box-shadow: 3px 5px 5px;
     color: #660066;
     font-style: italic;
-    font-size: large;
+    font-size:medium;
+    transform: skewX(-20deg);
+}
+
+.tab:hover{
+    color: white;
+    border: rgb(212, 206, 206) solid 1px;
+    font-size: medium;
+    font-weight: bold;
+    box-shadow: 0px 10px 5px black;
+    background: linear-gradient(to bottom, #cc00cc, #000000);
+    transform: skewX(0deg);
+
 }
 
 #tab1:checked ~ form label[for="tab1"],
