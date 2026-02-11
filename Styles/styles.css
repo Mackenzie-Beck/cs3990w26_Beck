@@ -32,6 +32,7 @@ body{
 #facts-panel{
     display: flex;
     flex-direction: column;
+    min-width: 20%;
 }
 
 #facts-panel div{
@@ -85,7 +86,7 @@ input{
 #tab2:checked ~ #content #default,
 #tab3:checked ~ #content #default,
 #parks:checked ~ #content #default,
-#public-holidays ~ #content #default {
+#public-holidays:checked ~ #content #default {
   display: none;
 }
 
@@ -178,5 +179,83 @@ input{
 #parks:checked ~ #content #parks-content,
 #parks:checked ~ #content #myalberta-content {
     display: block;
+}
+
+
+
+#jobs-panel {
+    background-color: rgb(148, 29, 148);
+    color: white;
+    min-width: 20%;
+}
+
+#jobs-panel > #left-col,
+#jobs-panel > #right-col {
+    display: flex;
+    flex-direction: row;
+    margin: 15px;
+    width: 50%;
+}
+
+
+
+.card{
+    background-color: darkmagenta;
+    border: double blue 4px;
+    border-top-right-radius: 30px;
+
+}
+
+#cybersecurity-card h5{
+    background-color: brown;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: inline-block;
+    padding-right: 10px;
+
+}
+
+#technician-card h5,
+#senior-card h5{
+    background-color: greenyellow;
+        border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding-right: 10px;
+}
+
+@media (max-width: 768px) {
+    #jobs-panel > div {
+        flex-direction: column;
+    }
+    #sub-panel > div{
+        width: 100% !important;
+        margin: 0 !important;
+    }
+    #footer > h4 {
+        width: 45%;
+    }
+}
+
+#sub-panel{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#sub-panel > div {
+    width: calc(50% - 20px);
+    margin: 10px;
+}
+
+#footer {
+    background-color: #cc00cc;
+    position: fixed;
+    bottom: 0;
+    height: 10%;
+    width: 100%;
+}
+
+#footer > h4 {
+    width: 20%;
 }
 
