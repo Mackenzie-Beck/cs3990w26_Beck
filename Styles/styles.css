@@ -1,0 +1,182 @@
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 100vh;
+}
+
+#header{
+    background-color: purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed; top: 0; width: 100% ;
+    height: 10%;
+    color: white;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+
+#main-content{
+    display: flex;
+    flex-direction: row;
+    margin-top:10vh ;
+}
+@media (max-width: 768px) {
+    #main-content {
+        flex-direction: column;
+    }
+}
+
+#facts-panel{
+    display: flex;
+    flex-direction: column;
+}
+
+#facts-panel div{
+    background-color: #cc00cc;
+    margin: 5px;
+    color: white;
+}
+
+#tab-menu{
+    display: flex;
+    flex-direction: column;
+}
+#buttons{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+input{
+    opacity: 0;
+}
+
+
+.tab{
+    margin: 10px;
+    border: white solid 1px;
+    background-color: #cc00cc;
+    border-radius: 10px;
+    box-shadow: 3px 5px 5px;
+    color: #660066;
+    font-style: italic;
+    font-size: large;
+}
+
+#tab1:checked ~ form label[for="tab1"],
+#tab2:checked ~ form label[for="tab2"],
+#tab3:checked ~ form label[for="tab3"] {
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    box-shadow: none;
+    background: linear-gradient(to bottom, #cc00cc, #000000);
+}
+
+#content > div:not(#default) {
+  display: none;
+}
+
+/* Hide default when any tab is checked */
+#tab1:checked ~ #content #default,
+#tab2:checked ~ #content #default,
+#tab3:checked ~ #content #default,
+#parks:checked ~ #content #default,
+#public-holidays ~ #content #default {
+  display: none;
+}
+
+#tab1:checked ~ #content #home-content {
+  display: block;
+}
+
+#tab2:checked ~ #content #provinces-content {
+  display: block;
+}
+
+
+#center-panel{
+    display: flex;
+    flex-direction: column;
+}
+
+
+#content p, #content h1{
+    color: #660066;
+}
+
+.province-item {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+    margin-bottom: 10px; 
+}
+
+
+.province-item img {
+    width: 5%; 
+}
+
+.province-item p {
+    margin: 0; 
+}
+
+
+.province-info {
+    display: none;
+    color: #660066;
+    font-style: italic;
+}
+
+
+.province-item:hover .province-info {
+    display: inline;
+}
+
+
+#sub-menu{
+    display: none;
+}
+
+#tab3-label:hover{
+        color: white;
+    font-size: larger;
+    font-weight: bold;
+    box-shadow: none;
+    background: linear-gradient(to bottom, #cc00cc, #000000);
+}
+
+#tab3-label:hover #sub-menu{
+    display: block;
+    background-color: #cc00cc;
+    position: absolute;
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    box-shadow: none;
+}
+
+#sub-menu label:hover {
+    background-color: #660066;
+}
+
+
+
+#myalberta-content > div {
+    display: none;
+}
+
+
+#public-holidays:checked ~ #content #holidays-content,
+#public-holidays:checked ~ #content #myalberta-content {
+    display: block;
+}
+
+#parks:checked ~ #content #parks-content,
+#parks:checked ~ #content #myalberta-content {
+    display: block;
+}
+
