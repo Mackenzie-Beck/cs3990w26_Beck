@@ -42,6 +42,12 @@ body{
     color: white;
 }
 
+#facts-panel div:hover{
+    background-color: #9b0e9b;
+    margin: 5px;
+    color: white;
+}
+
 #tab-menu{
     display: flex;
     flex-direction: column;
