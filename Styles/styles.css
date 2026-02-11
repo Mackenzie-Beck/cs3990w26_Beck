@@ -114,10 +114,23 @@ input{
     margin-bottom: 10px; /* Space between rows */
 }
 
+
 .province-item img {
     width: 5%; /* Or use a fixed size like 50px for consistency */
 }
 
 .province-item p {
     margin: 0; /* Removes default paragraph margins */
+}
+
+/* Hide the info text by default */
+.province-info {
+    display: none;
+    color: #660066;
+    font-style: italic;
+}
+
+/* Show the info text on hover */
+.province-item:hover .province-info {
+    display: inline;
 }
