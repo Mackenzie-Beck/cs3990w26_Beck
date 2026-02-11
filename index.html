@@ -38,10 +38,13 @@
                 <input type="radio" id="tab1" name="tabs">
                 <input type="radio" id="tab2" name="tabs">
                 <input type="radio" id="tab3" name="tabs">
+                <input type="radio" id="public-holidays" name="tabs">
+                <input type="radio" id="parks" name="tabs">
                 <form id="buttons">
                 <label class="tab" for="tab1">Home</label>
                 <label class="tab" for="tab2">Provinces and Territories</label>
-                <label class="tab" for="tab3">MyAlberta</label>
+                <label class="tab" for="tab3" id="tab3-label">MyAlberta 
+                    <div id="sub-menu"><label for="public-holidays">Public Holidays</label><br><label for="parks">Provincial Parks</label></div></label>
                 </form>
                 <div id="content">
                     <div id = "default">
@@ -62,8 +65,9 @@
                         </div>
                     </div>
                     <div id="myalberta-content">
-                        <!-- MyAlberta content here -->
-                </div>
+                        <div id="parks-content"><h1>National and Provincial parks in Alberta</h1></div>
+                        <div id="holidays-content"><h1>Alberta Public Holidays</h1>></div>
+                    </div>
             </div>
         </div>
         <div id="jobs-panel"></div>
