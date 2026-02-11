@@ -189,17 +189,21 @@ input{
     min-width: 20%;
 }
 
-#jobs-panel > div {
+#jobs-panel > #left-col,
+#jobs-panel > #right-col {
     display: flex;
     flex-direction: row;
     margin: 15px;
+    width: 50%;
 }
+
+
 
 .card{
     background-color: darkmagenta;
     border: double blue 4px;
     border-top-right-radius: 30px;
-    width: 50%;
+
 }
 
 #cybersecurity-card h5{
@@ -220,7 +224,22 @@ input{
 }
 
 @media (max-width: 768px) {
-    #jobs-panel {
+    #jobs-panel > div {
         flex-direction: column;
     }
+    #sub-panel > div{
+        width: 100% !important;
+        margin: 0 !important;
+    }
+}
+
+#sub-panel{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#sub-panel > div {
+    width: calc(50% - 20px);
+    margin: 10px;
 }
