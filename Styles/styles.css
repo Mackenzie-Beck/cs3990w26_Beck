@@ -85,7 +85,7 @@ input{
 #tab2:checked ~ #content #default,
 #tab3:checked ~ #content #default,
 #parks:checked ~ #content #default,
-#public-holidays ~ #content #default {
+#public-holidays:checked ~ #content #default {
   display: none;
 }
 
