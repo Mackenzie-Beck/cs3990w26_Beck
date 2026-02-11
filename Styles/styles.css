@@ -141,6 +141,13 @@ input{
     display: none;
 }
 
+#tab3-label:hover{
+        color: white;
+    font-size: larger;
+    font-weight: bold;
+    box-shadow: none;
+    background: linear-gradient(to bottom, #cc00cc, #000000);
+}
 
 #tab3-label:hover #sub-menu{
     display: block;
