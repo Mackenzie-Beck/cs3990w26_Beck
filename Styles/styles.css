@@ -47,6 +47,11 @@ body{
 #buttons{
     display: flex;
     flex-direction: row;
+    position: relative;
+}
+
+input{
+    opacity: 0;
 }
 
 
@@ -68,6 +73,23 @@ body{
     box-shadow: none;
 }
 
+/* Hide all content divs by default */
+#content > div {
+  display: none;
+}
+
+/* Show content when corresponding radio is checked */
+#tab1:checked ~ #content #home-content {
+  display: block;
+}
+
+#tab2:checked ~ #content #provinces-content {
+  display: block;
+}
+
+#tab3:checked ~ #content #myalberta-content {
+  display: block;
+}
 #center-panel{
     display: flex;
     flex-direction: column;
