@@ -73,6 +73,7 @@ input{
     font-size: larger;
     font-weight: bold;
     box-shadow: none;
+    background: linear-gradient(to bottom, #cc00cc, #000000);
 }
 
 /* Hide all content divs by default */
