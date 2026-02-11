@@ -231,6 +231,9 @@ input{
         width: 100% !important;
         margin: 0 !important;
     }
+    #footer > h4 {
+        width: 45%;
+    }
 }
 
 #sub-panel{
@@ -243,3 +246,16 @@ input{
     width: calc(50% - 20px);
     margin: 10px;
 }
+
+#footer {
+    background-color: #cc00cc;
+    position: fixed;
+    bottom: 0;
+    height: 10%;
+    width: 100%;
+}
+
+#footer > h4 {
+    width: 20%;
+}
+
