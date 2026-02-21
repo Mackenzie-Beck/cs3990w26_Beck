@@ -55,23 +55,35 @@
     border: solid rgb(88, 88, 88) 1px;
 }
 
-#CSTcertificate {
-    background-image: url("/images/CST_certificate_card.jpeg");
+
+.card-image {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    position: relative;
+    height:  20vh;
+}
+
+.card-image div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+#CSTcertificate {
+    background-image: url("/images/CST_certificate_card.jpeg");
 }
 
 #CSTdiploma {
     background-image: url("/images/CST_diploma.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 }
 
 #degree {
     background-image: url("/images/BA_card.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 }
