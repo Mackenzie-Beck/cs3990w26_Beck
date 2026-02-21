@@ -37,7 +37,41 @@
 }
 
 
-
 .button:hover {
     opacity: 50%;
+}
+
+#programs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.card {
+    display: grid;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 1%;
+    margin: 1%;
+    border: solid rgb(88, 88, 88) 1px;
+}
+
+#CSTcertificate {
+    background-image: url("/images/CST_certificate_card.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#CSTdiploma {
+    background-image: url("/images/CST_diploma.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#degree {
+    background-image: url("/images/BA_card.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
