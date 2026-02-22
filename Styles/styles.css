@@ -89,3 +89,25 @@
 #degree {
     background-image: url("/images/BA_card.jpg");
 }
+
+
+#classes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#classes div {
+    margin: 1%;
+    max-width:75%;
+}
+
+#classes div img {
+    object-fit: contain;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+#classes div p {
+    font-weight: bold;
+    text-align: center;
+}
