@@ -116,3 +116,13 @@
     font-weight: bold;
     text-align: center;
 }
+
+
+.hidden {
+    font-weight: 100 !important;
+   display: none;
+}
+
+.course:hover .hidden {
+    display: block;
+}
