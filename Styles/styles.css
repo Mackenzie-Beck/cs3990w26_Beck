@@ -140,3 +140,12 @@
 .course:hover .hidden {
     display: block;
 }
+
+
+.footer {
+    background-color: purple;
+    font-weight: bolder;    
+    height: 5vh;
+    color: white;
+    padding-top: 20px;
+}
