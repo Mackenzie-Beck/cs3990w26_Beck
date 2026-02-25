@@ -1,5 +1,5 @@
 #header {
-    background-image: url("/images/header_bg.jpg");
+    background-image: url("images/header_bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -87,15 +87,15 @@
 
 
 #CSTcertificate {
-    background-image: url("/images/CST_certificate_card.jpeg");
+    background-image: url("images/CST_certificate_card.jpeg");
 }
 
 #CSTdiploma {
-    background-image: url("/images/CST_diploma.jpeg");
+    background-image: url("images/CST_diploma.jpeg");
 }
 
 #degree {
-    background-image: url("/images/BA_card.jpg");
+    background-image: url("images/BA_card.jpg");
 }
 
 
