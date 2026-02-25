@@ -5,7 +5,7 @@
     background-position: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-bottom: 2%;
+    padding-bottom: 0.5%;
 }
 
 #header h1 {
@@ -44,7 +44,7 @@
 #programs {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    margin-top: 15vh;
+    margin-top: 5vh;
     margin-bottom: 15vh;
 }
 .card {
@@ -123,7 +123,7 @@
 }
 
 #classes div img:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 #classes div p {
