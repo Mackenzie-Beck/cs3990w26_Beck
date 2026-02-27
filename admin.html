@@ -9,7 +9,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
 <link rel="manifest" href="favicon/site.webmanifest" />
 <link rel="stylesheet" type="text/css" href="/Styles/styles.css">
-<script src = "scripts/script1.js" defref></script>
+<script src = "scripts/script1.js" deref></script>
 
 
 <meta charset="UTF-8"/>
@@ -26,9 +26,35 @@
 
 <body>
 
-<button onclick="sayHi" style="font-size: larger;", id="sayHi">Say Hi</button>
+<button onclick="sayHi()" style="font-size: larger;", id="sayHi">Say Hi</button>
 
-<button onclick="favoriteAnimal" style="font-size: larger;", id="favoriteAnimal">Favorite Animal</button>
+<button onclick="favoriteAnimal()" style="font-size: larger;", id="favoriteAnimal">Favorite Animal</button>
+
+
+<script>
+    function sayHi(){
+        let language = prompt("Please enter abbreviation of the language you speak (Eng, Fr, De, Spa, etc...)")
+
+        switch(language){
+            case "Eng":
+                alert("Hello!");
+                break;
+            case "Fr":
+                alert("Bonjour!");
+                break;
+            case "De":
+                alert("Hallo!");
+                break;
+            case "Spa":
+                alert("Hola!")
+                break;
+            default:
+                alert( "Sorry, but I do not speak your language.")
+        }
+    }
+</script>
+
+
 
 
 </body>
