@@ -24,13 +24,13 @@
 
 </head>
 
-<body>
+<body style="display: flex; flex-direction: column;">
 
 <button onclick="sayHi()" style="font-size: larger;", id="sayHi">Say Hi</button>
 
 <button onclick="favoriteAnimal()" style="font-size: larger;", id="favoriteAnimal">Favorite Animal</button>
 
-
+<div id="display"></div>
 <script>
     function sayHi(){
         let language = prompt("Please enter abbreviation of the language you speak (Eng, Fr, De, Spa, etc...)")
@@ -52,8 +52,38 @@
                 alert( "Sorry, but I do not speak your language.")
         }
     }
-</script>
 
+    function favoriteAnimal(){
+        let birthyear = prompt("Please enter your year of birth")
+        let age = new Date().getFullYear() - birthyear
+        if (age > 55){
+            document.getElementById("display").innerHTML = "<p>“Much like mathematics, programming is a logico-deductive system. And I think the important point that I am making is that in a purely logico-deductive system there is no philosophy - everything is known. However, insofar as there is art in mathematics, there is philosophy in mathematics. Insofar as there is art in programming, there is philosophy in programming.”</p>"
+        }
+        else if(age > 18 && age < 55){
+            let favAnimal = prompt("Please Enter your favorite animal (Dog, Cat, Mouse, Frog)")
+            switch(favAnimal){
+                case "Dog":
+                    document.getElementById("display").innerHTML = '<img src="images/dog.jpeg">';
+                    break;
+                case "Cat":
+                    document.getElementById("display").innerHTML = '<img src="images/cat.jpeg">';
+                    break;
+                case "Mouse":
+                    document.getElementById("display").innerHTML = '<img src="images/mouse.jpeg">';
+                    break;
+                case "Frog":
+                    document.getElementById("display").innerHTML = '<img src="images/frog.jpg">';
+                    break;
+                default:
+                    break;
+            }
+        }
+        else if(age < 18){
+            alert("Content is not available due to agerestrictions")
+        }
+        }
+    }
+</script>
 
 
 
