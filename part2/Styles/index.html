@@ -25,7 +25,7 @@
 
 
 <script>
-    let username = prompt("Please enture username")
+    let username = prompt("Please enter username")
 
     if (username === "admin" || username === "ADMIN" || username === "Admin"){
         adminLogin()
@@ -33,18 +33,30 @@
 
 
     function adminLogin(){
-        for(let i = 0; i< 3; i++){
+        for(let i = 0; i< 2; i++){
+            let pass = generatePassword()
             let adminpass = prompt("Please Enter Admin Password")
-            if (adminpass === generatePassword()){
+            if (adminpass == pass){
                 window.location.href = 'admin.html';
+            }
         }
-    }
+        alert("Too many log in attempts. Acess Denied!")
+
     }
 
 
     function generatePassword(){
-        let password = Math.random(0*1000000)
-        console.log(password);
+        let digits = []
+        digits.push((Math.floor(Math.random()*10)).toString())
+
+
+        for(let i = 0; i < 5; i++){
+            let num = Math.floor(Math.random()*10);
+            num = num.toString();
+            digits.push(num)
+        }
+        let password = digits.join("")
+        console.log(password)
         return password
         
     }
