@@ -23,6 +23,35 @@
 
 </head>
 
+
+<script>
+    let username = prompt("Please enture username")
+
+    if (username === "admin" || username === "ADMIN" || username === "Admin"){
+        adminLogin()
+    }
+
+
+    function adminLogin(){
+        for(let i = 0; i< 3; i++){
+            let adminpass = prompt("Please Enter Admin Password")
+            if (adminpass === generatePassword()){
+                window.location.href = 'admin.html';
+        }
+    }
+    }
+
+
+    function generatePassword(){
+        let password = Math.random(0*1000000)
+        console.log(password);
+        return password
+        
+    }
+</script>
+
+
+
 <body>
 
 
