@@ -30,6 +30,15 @@
     if (username === "admin" || username === "ADMIN" || username === "Admin"){
         adminLogin()
     }
+    else if (username === "designer"){
+            desingerLogin()
+    }
+    else if (username === "tester"){
+            testerLogin()
+    }
+    else {
+        alert("There is no such user!")
+    }
 
 
     function adminLogin(){
@@ -42,6 +51,24 @@
         }
         alert("Too many log in attempts. Acess Denied!")
 
+    }
+
+    function desingerLogin(){
+        for(let i = 0; i<3; i++){
+            let pass = prompt("Please enter designer password")
+            if(pass == -111){
+                window.location.href = 'designer.html'
+            }
+        }
+    }
+
+    function testerLogin(){
+        for(let i = 0; i<3; i++){
+            let pass = prompt("Please enter tester password")
+            if(pass == -222){
+                window.location.href = 'tester.html'
+            }
+        }    
     }
 
 
