@@ -1,261 +1,90 @@
-body{
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    height: 100vh;
+
+body {
+    background-color: darkred;
 }
 
-#header{
-    background-color: purple;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed; top: 0; width: 100% ;
-    height: 10%;
-    color: white;
-    font-size: xx-large;
-    font-weight: bold;
+#top-level {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    
 }
 
 
-#main-content{
-    display: flex;
-    flex-direction: row;
-    margin-top:10vh ;
-}
-@media (max-width: 768px) {
-    #main-content {
-        flex-direction: column;
-    }
+img {
+  display: block;
+  margin: auto;
+  width: 75%;
+  height: 75%;
+  object-fit: contain;
 }
 
-#facts-panel{
-    display: flex;
-    flex-direction: column;
-    min-width: 20%;
-}
-
-#facts-panel div{
-    background-color: #cc00cc;
-    margin: 5px;
-    color: white;
-}
-
-#tab-menu{
-    display: flex;
-    flex-direction: column;
-}
-#buttons{
-    display: flex;
-    flex-direction: row;
-    position: relative;
-}
-
-input{
-    opacity: 0;
-}
-
-
-.tab{
-    margin: 10px;
-    border: white solid 1px;
-    background-color: #cc00cc;
+img:hover {
+    border: 5px white solid;
     border-radius: 10px;
-    box-shadow: 3px 5px 5px;
-    color: #660066;
-    font-style: italic;
-    font-size: large;
 }
 
-#tab1:checked ~ form label[for="tab1"],
-#tab2:checked ~ form label[for="tab2"],
-#tab3:checked ~ form label[for="tab3"] {
+#top-level > div{
+    
+    margin: 2%;
+}
+
+
+.col {
+    grid-row-start: 1;
+    grid-row-end: 4;
+    gap: 1em;
+    height: 100%;
+}
+
+.col > div {
+    background-color: rgb(226, 98, 120);
+    height: 30%;
+    margin: 5%;
+    place-content: center;
+    text-align: center;
+
+}
+
+
+
+a {
+    color: darkred;
+    font-weight: bolder;
+
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
     color: white;
-    font-size: larger;
-    font-weight: bold;
-    box-shadow: none;
-    background: linear-gradient(to bottom, #cc00cc, #000000);
-}
-
-#content > div:not(#default) {
-  display: none;
-}
-
-/* Hide default when any tab is checked */
-#tab1:checked ~ #content #default,
-#tab2:checked ~ #content #default,
-#tab3:checked ~ #content #default,
-#parks:checked ~ #content #default,
-#public-holidays:checked ~ #content #default {
-  display: none;
-}
-
-#tab1:checked ~ #content #home-content {
-  display: block;
-}
-
-#tab2:checked ~ #content #provinces-content {
-  display: block;
-}
-
-
-#center-panel{
-    display: flex;
-    flex-direction: column;
-}
-
-
-#content p, #content h1{
-    color: #660066;
-}
-
-.province-item {
-    display: flex;
-    align-items: center; 
-    gap: 10px; 
-    margin-bottom: 10px; 
-}
-
-
-.province-item img {
-    width: 5%; 
-}
-
-.province-item p {
-    margin: 0; 
-}
-
-
-.province-info {
-    display: none;
-    color: #660066;
-    font-style: italic;
-}
-
-
-.province-item:hover .province-info {
-    display: inline;
-}
-
-
-#sub-menu{
-    display: none;
-}
-
-#tab3-label:hover{
-        color: white;
-    font-size: larger;
-    font-weight: bold;
-    box-shadow: none;
-    background: linear-gradient(to bottom, #cc00cc, #000000);
-}
-
-#tab3-label:hover #sub-menu{
-    display: block;
-    background-color: #cc00cc;
-    position: absolute;
-    color: white;
-    font-size: larger;
-    font-weight: bold;
-    box-shadow: none;
-}
-
-#sub-menu label:hover {
-    background-color: #660066;
+    background-color: darkred;
 }
 
 
 
-#myalberta-content > div {
-    display: none;
-}
 
-
-#public-holidays:checked ~ #content #holidays-content,
-#public-holidays:checked ~ #content #myalberta-content {
-    display: block;
-}
-
-#parks:checked ~ #content #parks-content,
-#parks:checked ~ #content #myalberta-content {
-    display: block;
-}
-
-
-
-#jobs-panel {
-    background-color: rgb(148, 29, 148);
-    color: white;
-    min-width: 20%;
-}
-
-#jobs-panel > #left-col,
-#jobs-panel > #right-col {
-    display: flex;
-    flex-direction: row;
-    margin: 15px;
-    width: 50%;
-}
-
-
-
-.card{
-    background-color: darkmagenta;
-    border: double blue 4px;
-    border-top-right-radius: 30px;
-
-}
-
-#cybersecurity-card h5{
-    background-color: brown;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    display: inline-block;
-    padding-right: 10px;
-
-}
-
-#technician-card h5,
-#senior-card h5{
+.col p {
     background-color: greenyellow;
-        border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    padding-right: 10px;
-}
-
-@media (max-width: 768px) {
-    #jobs-panel > div {
-        flex-direction: column;
-    }
-    #sub-panel > div{
-        width: 100% !important;
-        margin: 0 !important;
-    }
-    #footer > h4 {
-        width: 45%;
-    }
-}
-
-#sub-panel{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-#sub-panel > div {
-    width: calc(50% - 20px);
-    margin: 10px;
+    color: white;
+    text-align: center;
+    align-items: center;
 }
 
 #footer {
-    background-color: #cc00cc;
-    position: fixed;
-    bottom: 0;
-    height: 10%;
-    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 4;
+    background-color: grey;
+    color: white;
+    height: min-content;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
 
-#footer > h4 {
-    width: 20%;
+#footer:hover p::after{
+    content: "A new sentance appears when hovering over the footer";
+    font-style: italic;
 }
-
