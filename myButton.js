@@ -1,0 +1,11 @@
+export class Button {
+    constructor(btnText, btnBgColor, btnTitle) {
+        this.btnText = btnText
+        this.btnBgColor = btnBgColor
+        this.btnTitle = btnTitle
+    }
+
+    show(){
+        document.write(`<p title="${this.btnTitle}" style="background-color:${this.btnBgColor}">${this.btnText}</p>`);
+    }
+}
