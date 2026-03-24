@@ -1,19 +1,25 @@
-import Button from './myButton.js'
-import arrTexts from './myArrays.js'
-import arrColors from './myArrays.js'
-import arrButtons from './myArrays.js'
+import {Button} from './myButton.js'
+import {ColorButton} from "./myColorButton.js"
+import {arrTexts, arrButtons, arrColors} from './myArrays.js'
 
 
-
-function generateButtons(){
-    for (let i = 0; i < arrTexts.length; i++){
-        arrTexts.forEach(arrTexts[i], arrColors[i] => {
-            // create button here
+export function generateButtons(){
+        arrTexts.forEach((element, i) => {
+            let newBtn = new Button(element, arrColors[i])
+            arrButtons.push(newBtn)
         })
     }
+
+
+
+export function displayButtons(){
+        arrButtons.forEach((button) => {
+            button.show()
+        })
 }
 
 
-function displayButtons(){
-    //TODO
+export function displayColorButton(){
+    let newCBtn = new ColorButton(arrTexts[0], arrColors[0], 'colorBtn', arrColors[2])
+    newCBtn.show()
 }
