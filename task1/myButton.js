@@ -6,6 +6,6 @@ export class Button {
     }
 
     show(){
-        document.body.innerHTML += `<p title="${this.btnTitle}" style="background-color:${this.btnBgColor}; border:3px solid black; display: inline; margin: 10px">${this.btnText}</p>`;
+        document.write(`<p title="${this.btnTitle}" style="background-color:${this.btnBgColor}; border:3px solid black; display: inline; margin: 10px">${this.btnText}</p>`);
     }
 }

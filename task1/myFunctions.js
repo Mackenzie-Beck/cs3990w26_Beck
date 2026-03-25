@@ -13,13 +13,15 @@ export function generateButtons(){
 
 
 export function displayButtons(){
+    let i = 1
         arrButtons.forEach((button) => {
-            button.show()
+            setTimeout(() => button.show(), i*1000)
+            i = i+1    
         })
 }
 
 
 export function displayColorButton(){
     let newCBtn = new ColorButton(arrTexts[0], arrColors[0], 'colorBtn', arrColors[2])
-    newCBtn.show()
+    setTimeout(() => newCBtn.show(), 5000)
 }
