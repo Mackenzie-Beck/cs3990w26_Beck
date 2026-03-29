@@ -1,0 +1,12 @@
+
+
+
+h1.menu-header::before {
+  content: "▶";
+  color: green;
+  margin-right: 8px;
+}
+
+h1.menu-header.open::before {
+  content: "▼";
+}
