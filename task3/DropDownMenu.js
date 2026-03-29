@@ -20,27 +20,38 @@ export class DropDownMenu{
 
     handleEvent(event){
         
-        this.title.classList.toggle("open");
-        //generate list of elements 
+        if (event.target == this.title){
+            this.title.classList.toggle("open");
+            //generate list of elements 
 
-        if (this.title.classList.contains("open")){
-            this.menuItems = document.createElement("div");
-            for(let i =0; i < this.options.length; i++){
-                let container = document.createElement("div");
-                let content = document.createElement("p");
-                content.textContent = this.options[i]
-                container.append(content)
-                this.container.append(container)
-                this.menuItems.append(container);
+            if (this.title.classList.contains("open")){
+                this.menuItems = document.createElement("div");
+                for(let i =0; i < this.options.length; i++){
+                    let container = document.createElement("div");
+                    let content = document.createElement("p");
+                    content.classList.add("menu-item")
+                    content.textContent = this.options[i]
+                    container.append(content)
+                    this.container.append(container)
+                    this.menuItems.append(container);
+                    
+                }
+                this.container.append(this.menuItems);
+                this.menuItems.addEventListener("click", this)
+            }
+            else{
+                if (this.menuItems) {
+                    this.menuItems.remove();
+                }
+            }
+        }
+        else if (event.target.tagName === "P" && this.menuItems.contains(event.target)) {
+            for (let child of this.menuItems.querySelectorAll("p")){
+                child.classList.remove("menu-item-selected");
+            }
+            event.target.classList.toggle("menu-item-selected");
+        }
 
-            }
-            this.container.append(this.menuItems);
-        }
-        else{
-            if (this.menuItems) {
-                this.menuItems.remove();
-            }
-        }
 
 
     }

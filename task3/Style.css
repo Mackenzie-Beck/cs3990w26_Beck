@@ -10,3 +10,9 @@ h1.menu-header::before {
 h1.menu-header.open::before {
   content: "▼";
 }
+
+
+
+.menu-item-selected{
+    color: red;
+}
