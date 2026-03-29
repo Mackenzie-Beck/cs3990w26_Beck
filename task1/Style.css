@@ -1,0 +1,25 @@
+
+
+
+
+body {
+    background-color: pink;
+}
+
+
+.news-container{
+    background-color: palevioletred;
+    margin: 5px;
+}
+
+.news-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:crimson;
+    margin: 10px;
+    border: 2px solid rgb(184, 16, 50);
+    align-content: center;
+}
+
