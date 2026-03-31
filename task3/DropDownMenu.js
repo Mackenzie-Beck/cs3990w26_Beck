@@ -8,11 +8,18 @@ export class DropDownMenu{
         this.options = options
 
         this.container = document.createElement("div")
+        this.listContainer = document.createElement("div")
         this.title = document.createElement("h1")
         this.title.textContent = title
         this.title.classList.add("menu-header")
 
-        this.container.append(this.title)
+        this.imageContainer = document.createElement("div");
+        // this.imageContainer.textContent = "Test"
+        
+
+        this.listContainer.append(this.title)
+        this.container.append(this.listContainer)
+        this.container.append(this.imageContainer)
         this.title.addEventListener("click", this)
 
         document.body.append(this.container)
@@ -36,7 +43,7 @@ export class DropDownMenu{
                     this.menuItems.append(container);
                     
                 }
-                this.container.append(this.menuItems);
+                this.listContainer.append(this.menuItems);
                 this.menuItems.addEventListener("click", this)
             }
             else{
@@ -50,6 +57,13 @@ export class DropDownMenu{
                 child.classList.remove("menu-item-selected");
             }
             event.target.classList.toggle("menu-item-selected");
+            for (let child of this.imageContainer.querySelectorAll("img")){
+                child.remove()
+            }
+            let sweetImage = document.createElement("img")
+            sweetImage.setAttribute("src", `./images/${event.target.textContent}.jpeg`)
+            this.imageContainer.append(sweetImage)
+            console.log(`./images/${event.target.textContent}.jpeg`)
         }
 
 
