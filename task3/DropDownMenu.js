@@ -49,7 +49,10 @@ export class DropDownMenu{
             else{
                 if (this.menuItems) {
                     this.menuItems.remove();
+                    for (let child of this.imageContainer.querySelectorAll("img")){
+                    child.remove()
                 }
+                    }
             }
         }
         else if (event.target.tagName === "P" && this.menuItems.contains(event.target)) {
