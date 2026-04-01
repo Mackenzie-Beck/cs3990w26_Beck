@@ -27,10 +27,13 @@
     <script type="module">
         import {Fruits} from "./fruitList.js";
         import {Fruit} from "./Fruit.js";
+        import {RatedFruit} from "./Fruit.js";
         import {ColorButton} from "./btnColor.js"
+
+
         let assignedColors = []
         for (let fruitdata of Fruits){
-            let fruit = new Fruit(fruitdata.fruit, fruitdata.color);
+            let fruit = new RatedFruit(fruitdata.fruit, fruitdata.color, 3); 
             if (!assignedColors.includes(fruitdata.color)){
                 let button = new ColorButton(fruitdata.color);
                 button.show();

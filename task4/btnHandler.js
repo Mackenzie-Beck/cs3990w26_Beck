@@ -18,4 +18,10 @@ $(document).ready(function() {
             });
         }
     });
+
+    $("#fruits").on("click", ".star", function() {
+        const $clickedStar = $(this);
+        $clickedStar.prevAll(".star").addBack().addClass("orange");
+        $clickedStar.nextAll(".star").removeClass("orange");
+    });
 });
