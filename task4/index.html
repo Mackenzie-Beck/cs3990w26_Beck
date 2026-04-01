@@ -1,0 +1,55 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Mackenzie Beck</title>
+
+
+
+<meta charset="UTF-8"/>
+
+<meta name="viewport" content="width=device-width, intial-scale=1.0" />
+
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+<meta name="description" content="CV website for Mackenzie Beck">
+<meta name="author" content="Mackenzie Beck">
+<link rel="stylesheet" href="Style.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+
+
+
+
+
+<body>
+    <script type="module">
+        import {Fruits} from "./fruitList.js";
+        import {Fruit} from "./Fruit.js";
+        import {ColorButton} from "./btnColor.js"
+        let assignedColors = []
+        for (let fruitdata of Fruits){
+            let fruit = new Fruit(fruitdata.fruit, fruitdata.color);
+            if (!assignedColors.includes(fruitdata.color)){
+                let button = new ColorButton(fruitdata.color);
+                button.show();
+                assignedColors.push(fruitdata.color)
+            }
+            
+            fruit.show();
+        }
+
+    </script>
+    <script src = "btnHandler.js"></script>
+    <div id="colors">
+        <h2> Select Color</h2>
+    </div>
+
+    <div id="fruits">
+        <ul>Fruits:
+
+        </ul>
+        
+    </div>
+</body>
