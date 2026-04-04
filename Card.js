@@ -38,8 +38,10 @@ export class Card {
         });
 
         checkBtn.onclick = () => {
-            const selected = this.cardDiv.querySelector('input[name="answer"]:checked').value;
-            console.log(selected == this.correctAnswer)
+            if (this.cardDiv.querySelector('input[name="answer"]:checked').value){
+                const selected = this.cardDiv.querySelector('input[name="answer"]:checked').value;
+                console.log(selected == this.correctAnswer)
+            }
         };
 
         this.cardDiv.appendChild(checkBtn);
