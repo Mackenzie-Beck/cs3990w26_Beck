@@ -8,6 +8,7 @@ export class Card {
         this.question = question;
         this.options = options;
         this.correctAnswer = correctAnswer;
+        this.done = false
     }
  
     render(){
@@ -41,6 +42,9 @@ export class Card {
             if (this.cardDiv.querySelector('input[name="answer"]:checked').value){
                 const selected = this.cardDiv.querySelector('input[name="answer"]:checked').value;
                 console.log(selected == this.correctAnswer)
+                if(selected == this.correctAnswer){
+                    this.done = true
+                }
             }
         };
 
