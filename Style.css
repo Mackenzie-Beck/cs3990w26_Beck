@@ -16,9 +16,6 @@
 .card.hidden {
     background-color: rgb(67, 67, 67);
     cursor: pointer;
-}
-
-.card > * {
     transition: opacity 1s ease;
 }
 
@@ -36,10 +33,11 @@
 }
 
 #cardContainer.hidden {
-    background-color: gray;
+    background-color: rgb(78, 78, 78);
+    transition: opacity 1s ease;
+    pointer-events: none;
 }
 
 #cardContainer.hidden > * {
     opacity: 0;
-    pointer-events: none;
 }

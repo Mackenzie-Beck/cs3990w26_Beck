@@ -94,21 +94,23 @@ export class AssetCard {
             console.log("gem!")
             const starIcon = document.createElement("i");
             starIcon.className = "fas fa-star";
-            stars.appendChild(starIcon);
+            $(starIcon).hide().appendTo(stars).fadeIn(500);
         }
         else if (this.asset == '<i class="fa-solid fa-paw"></i>'){
             console.log("Bear!")
             const lastStar = stars.querySelector("i:last-of-type");
             if (lastStar) {
-                stars.removeChild(lastStar);
+                $(lastStar).fadeOut(500, function() {
+                    $(this).remove();
+                });
             }
         }
         else if (this.asset== '<i class="fa-solid fa-circle-xmark" style="color: red;"></i>'){
-            document.getElementById("cardContainer").classList.add("hidden")
+            $("#cardContainer").fadeOut(1000);
             let game_over = document.createElement("h1")
             game_over.id = "GameOver"
             game_over.textContent = "Game Over!"
-            document.getElementById("title").append(game_over)
+            $(game_over).hide().appendTo("#title").fadeIn(1000);
         }
     }
 

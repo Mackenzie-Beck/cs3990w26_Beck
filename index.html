@@ -45,7 +45,7 @@
             // Get the card element that was just added and add click handler
             let cardElement = document.getElementById("cardContainer").lastElementChild;
             cardElement.onclick = () => {
-                cardElement.classList.remove("hidden");
+                cardElement.classList.remove("hidden")
             };
         } else if (cardData[i].description) {
             console.log('Creating asset card')
@@ -56,7 +56,7 @@
             let assetElement = document.getElementById("cardContainer").lastElementChild;
             assetElement.assetInstance = newAsset;
             assetElement.onclick = () => {
-                assetElement.classList.remove("hidden");
+                assetElement.classList.remove("hidden")
                 assetElement.assetInstance.changeState();
             };
         } else {
