@@ -23,7 +23,7 @@
 
 <div id="title">
 <h2 id = "stars">Your score: </h2>
-
+<h3 id="feedback"></h3>
 </div>
 <div id = "cardContainer" class="hidden">
 </div>
@@ -71,6 +71,7 @@
     startBtn.onclick = () => {
         document.getElementById("cardContainer").classList.remove("hidden")
         timer(cardData.length*2)
+        startBtn.remove()
     }
     document.getElementById("title").append(startBtn);
 </script>

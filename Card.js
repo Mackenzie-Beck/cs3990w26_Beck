@@ -50,7 +50,11 @@ export class Card {
                     const starIcon = document.createElement("i");
                     starIcon.className = "fas fa-star";
                     document.getElementById("stars").appendChild(starIcon);
+
+                    $("#feedback").text("Correct!").fadeIn(200).delay(1000).fadeOut(300);
                 }
+                $("#feedback").text("Wrong!").fadeIn(200).delay(1000).fadeOut(300);
+                this.cardDiv.classList.add("done")
             }
         };
 
@@ -95,10 +99,12 @@ export class AssetCard {
             const starIcon = document.createElement("i");
             starIcon.className = "fas fa-star";
             $(starIcon).hide().appendTo(stars).fadeIn(500);
+            $("#feedback").text("+1 Star!").fadeIn(200).delay(1000).fadeOut(300);
         }
         else if (this.asset == '<i class="fa-solid fa-paw"></i>'){
             console.log("Bear!")
             const lastStar = stars.querySelector("i:last-of-type");
+            $("#feedback").text("The bear tales a star!").fadeIn(200).delay(1000).fadeOut(300);
             if (lastStar) {
                 $(lastStar).fadeOut(500, function() {
                     $(this).remove();
