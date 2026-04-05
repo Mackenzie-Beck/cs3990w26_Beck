@@ -21,12 +21,46 @@
 
 <body>
 
-<script type="module">
-    import { Card } from "./Card.js";
 
-    let test = new Card("What is the capital of France?", ["Berlin", "Madrid", "Paris", "Lisbon"], "Paris");
-    test.show(document.body);
+<div id = "cardContainer">
+</div>
+
+<script type="module">
+    import { Card, AssetCard } from "./Card.js";
+    import { arrShuffle, timer, stopTimer } from "./Utils.js"
+
+    let cardData = arrShuffle()
+    console.log('Total cards:', cardData.length)
+
+    for(let i =0; i < cardData.length; i++){
+        console.log(`Card ${i}:`, cardData[i])
+        if (cardData[i].options) {
+            console.log('Creating question card')
+            let newCard = new Card(cardData[i].question, cardData[i].options, cardData[i].correctAnswer);
+            newCard.show(document.getElementById("cardContainer"));
+
+            // Get the card element that was just added and add click handler
+            let cardElement = document.getElementById("cardContainer").lastElementChild;
+            cardElement.onclick = () => {
+                cardElement.classList.remove("hidden");
+            };
+        } else if (cardData[i].description) {
+            console.log('Creating asset card')
+            let newAsset = new AssetCard(cardData[i].value, cardData[i].description);
+            newAsset.show(document.getElementById("cardContainer"));
+
+            // Get the asset card element that was just added and add click handler
+            let assetElement = document.getElementById("cardContainer").lastElementChild;
+            assetElement.onclick = () => {
+                assetElement.classList.remove("hidden");
+            };
+        } else {
+            console.log('Card has neither options nor description:', cardData[i])
+        }
+    }
 </script>
+
+
 
 
 

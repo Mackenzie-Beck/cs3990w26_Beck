@@ -21,6 +21,9 @@ export class Card {
 
         this.cardDiv.appendChild(question);
         this.cardDiv.classList.add("card")
+        this.cardDiv.classList.add("hidden")  // Start hidden
+
+
 
         this.options.forEach((option, index) => {
             let label = document.createElement("label");
@@ -52,6 +55,36 @@ export class Card {
 
         return this.cardDiv;
     }
+
+    show(container){
+        // insert block built by render into dom
+        container.appendChild(this.render());
+    }
+}
+
+
+export class AssetCard {
+    constructor(asset, description){
+        this.asset = asset
+        this.description = description
+    }
+
+    render(){
+        this.cardDiv = document.createElement("div");
+        let asset = document.createElement("p");
+        asset.innerHTML = this.asset;  // Changed from textContent to innerHTML
+        this.cardDiv.append(asset)
+
+        let description = document.createElement("p");
+        description.textContent = this.description;
+        this.cardDiv.append(description)
+
+        this.cardDiv.classList.add("card")
+        this.cardDiv.classList.add("hidden")  // Start hidden
+
+        return this.cardDiv;
+    }
+
 
     show(container){
         // insert block built by render into dom
