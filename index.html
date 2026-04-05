@@ -23,15 +23,6 @@
 
 <div id="title">
 
-<script>
-    let startBtn = document.createElement("BUTTON");
-    startBtn.classList.add("startBtn");
-    startBtn.textContent = "Start Game";
-    startBtn.onclick = () => {
-        document.getElementById("cardContainer").classList.remove("hidden")
-    }
-    document.getElementById("title").append(startBtn);
-</script>
 
 </div>
 <div id = "cardContainer" class="hidden">
@@ -70,6 +61,16 @@
             console.log('Card has neither options nor description:', cardData[i])
         }
     }
+
+
+    let startBtn = document.createElement("BUTTON");
+    startBtn.classList.add("startBtn");
+    startBtn.textContent = "Start Game";
+    startBtn.onclick = () => {
+        document.getElementById("cardContainer").classList.remove("hidden")
+        timer(cardData.length*2)
+    }
+    document.getElementById("title").append(startBtn);
 </script>
 
 

@@ -15,11 +15,28 @@ export function arrShuffle(){
 
 
 
-export function timer(){
+export function timer(time){
+    let timeContainer = document.createElement("div")
+    timeContainer.textContent = time
+    const interval = setInterval(function () {
+        time = time - 1
+        timeContainer.textContent = time
+        if(time <=0){
+            stopTimer(interval)
+        }
+
+    }, 1000)
+
+    document.getElementById("title").append(timeContainer)
 
 }
 
 
-export function stopTimer(){
-
+export function stopTimer(interval){
+    console.log("stopTimer")
+    clearInterval(interval)
+    document.getElementById("cardContainer").classList.add("hidden")
+    let game_over = document.createElement("h1")
+    game_over.textContent = "Game Over!"
+    document.getElementById("title").append(game_over)
 }
