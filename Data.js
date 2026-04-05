@@ -38,10 +38,6 @@ export const assets = [
     description: "A bear takes away a star!"
   },
   {
-    value: '<i class="fa-solid fa-hourglass"></i>',
-    description: "You get more time!"
-  },
-  {
     value: '<i class="fa-solid fa-circle-xmark" style="color: red;"></i>',
     description: "Game over!"
   }

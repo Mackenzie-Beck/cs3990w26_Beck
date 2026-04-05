@@ -35,8 +35,12 @@ export function timer(time){
 export function stopTimer(interval){
     console.log("stopTimer")
     clearInterval(interval)
-    document.getElementById("cardContainer").classList.add("hidden")
-    let game_over = document.createElement("h1")
-    game_over.textContent = "Game Over!"
-    document.getElementById("title").append(game_over)
+    if (!document.getElementById("GameOver")){
+            document.getElementById("cardContainer").classList.add("hidden")
+            let game_over = document.createElement("h1")
+            game_over.id = "GameOver"
+            game_over.textContent = "Game Over!"
+            document.getElementById("title").append(game_over)
+    }
+
 }

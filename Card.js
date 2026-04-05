@@ -1,4 +1,4 @@
-
+import {stopTimer} from "./Utils.js"
 
 
 
@@ -47,6 +47,9 @@ export class Card {
                 console.log(selected == this.correctAnswer)
                 if(selected == this.correctAnswer){
                     this.done = true
+                    const starIcon = document.createElement("i");
+                    starIcon.className = "fas fa-star";
+                    document.getElementById("stars").appendChild(starIcon);
                 }
             }
         };
@@ -85,6 +88,29 @@ export class AssetCard {
         return this.cardDiv;
     }
 
+    changeState(){
+        const stars = document.getElementById("stars");
+        if (this.asset == '<i class="fa-solid fa-gem"></i>'){
+            console.log("gem!")
+            const starIcon = document.createElement("i");
+            starIcon.className = "fas fa-star";
+            stars.appendChild(starIcon);
+        }
+        else if (this.asset == '<i class="fa-solid fa-paw"></i>'){
+            console.log("Bear!")
+            const lastStar = stars.querySelector("i:last-of-type");
+            if (lastStar) {
+                stars.removeChild(lastStar);
+            }
+        }
+        else if (this.asset== '<i class="fa-solid fa-circle-xmark" style="color: red;"></i>'){
+            document.getElementById("cardContainer").classList.add("hidden")
+            let game_over = document.createElement("h1")
+            game_over.id = "GameOver"
+            game_over.textContent = "Game Over!"
+            document.getElementById("title").append(game_over)
+        }
+    }
 
     show(container){
         // insert block built by render into dom
