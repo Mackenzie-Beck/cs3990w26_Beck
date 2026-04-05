@@ -1,11 +1,14 @@
 
 
-
+body {
+    background-color: lightslategray;
+}
 .card {
     display: flex;
     flex-direction: column;
     border: 5px black solid;
     background-color: gray;
+
     margin: 10px;
     opacity: 1;
     min-width: 200px;
@@ -24,7 +27,7 @@
 }
 
 .card.done {
-    background-color: red;
+    background-color: tomato;
     pointer-events: none;
 }
 
@@ -34,13 +37,16 @@
 
 #cardContainer {
     display: grid;
+    background-color: darkcyan;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    margin: 5px;
+    border-radius: 10px;
+    border: solid black;
+    margin: 15px;
     opacity: 1;
 }
 
 #cardContainer.hidden {
-    background-color: rgb(78, 78, 78);
+    background-color: rgb(57, 55, 55);
     transition: opacity 1s ease;
     pointer-events: none;
 }

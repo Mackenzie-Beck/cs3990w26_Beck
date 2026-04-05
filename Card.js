@@ -53,7 +53,8 @@ export class Card {
 
                     $("#feedback").text("Correct!").fadeIn(200).delay(1000).fadeOut(300);
                 }
-                $("#feedback").text("Wrong!").fadeIn(200).delay(1000).fadeOut(300);
+                else if (selected != this.correctAnswer){$("#feedback").text("Wrong!").fadeIn(200).delay(1000).fadeOut(300);}
+                
                 this.cardDiv.classList.add("done")
             }
         };
