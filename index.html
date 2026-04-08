@@ -45,6 +45,8 @@
             // Get the card element that was just added and add click handler
             let cardElement = document.getElementById("cardContainer").lastElementChild;
             cardElement.onclick = () => {
+               // if (!cardDiv.classList.contains("hidden")) return;
+                console.log("reveal card")
                 cardElement.classList.remove("hidden")
             };
         } else if (cardData[i].description) {

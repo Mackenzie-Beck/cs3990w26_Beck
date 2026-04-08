@@ -9,6 +9,7 @@ export class Card {
         this.options = options;
         this.correctAnswer = correctAnswer;
         this.done = false
+        this.is = crypto.randomUUID()
     }
  
     render(){
@@ -21,10 +22,10 @@ export class Card {
 
         this.cardDiv.appendChild(question);
         this.cardDiv.classList.add("card")
-        this.cardDiv.classList.add("hidden")  // Start hidden
+        this.cardDiv.classList.add("hidden")  
 
 
-
+        // create questions
         this.options.forEach((option, index) => {
             let label = document.createElement("label");
 
@@ -32,17 +33,22 @@ export class Card {
             radio.setAttribute("type", "radio");
             radio.setAttribute("name", "answer");
             radio.setAttribute("value", option);
-            radio.setAttribute("id", `option-${index}`);
 
+
+            radio.setAttribute("id", `option-${this.id}-${index}`);
             label.setAttribute("for", `option-${index}`);
+
             label.appendChild(radio);
             label.append(option);
 
             this.cardDiv.appendChild(label);
         });
 
+
         checkBtn.onclick = () => {
+            console.log("click")
             if (this.cardDiv.querySelector('input[name="answer"]:checked').value){
+                console.log("queryselector")
                 const selected = this.cardDiv.querySelector('input[name="answer"]:checked').value;
                 console.log(selected == this.correctAnswer)
                 if(selected == this.correctAnswer){
