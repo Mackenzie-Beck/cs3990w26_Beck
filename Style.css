@@ -38,7 +38,7 @@ body {
 #cardContainer {
     display: grid;
     background-color: darkcyan;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     border-radius: 10px;
     border: solid black;
     margin: 15px;
