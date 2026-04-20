@@ -1,82 +1,20 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
+
+
 <head>
-<title>Mackenzie Beck</title>
-
-
-
-<meta charset="UTF-8"/>
-
-<meta name="viewport" content="width=device-width, intial-scale=1.0" />
-
-<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-<meta name="description" content="CV website for Mackenzie Beck">
-<meta name="author" content="Mackenzie Beck">
-<link rel="stylesheet" href="Style.css">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
-
-<div id="title">
-<h2 id = "stars">Your score: </h2>
-<h3 id="feedback"></h3>
-</div>
-<div id = "cardContainer" class="hidden">
-</div>
-
-<script type="module">
-    import { Card, AssetCard } from "./Card.js";
-    import { arrShuffle, timer, stopTimer } from "./Utils.js"
-
-    let cardData = arrShuffle()
-    console.log('Total cards:', cardData.length)
-
-    for(let i =0; i < cardData.length; i++){
-        console.log(`Card ${i}:`, cardData[i])
-        if (cardData[i].options) {
-            console.log('Creating question card')
-            let newCard = new Card(cardData[i].question, cardData[i].options, cardData[i].correctAnswer);
-            newCard.show(document.getElementById("cardContainer"));
-
-            // Get the card element that was just added and add click handler
-            let cardElement = document.getElementById("cardContainer").lastElementChild;
-            cardElement.onclick = () => {
-               // if (!cardDiv.classList.contains("hidden")) return;
-                console.log("reveal card")
-                cardElement.classList.remove("hidden")
-            };
-        } else if (cardData[i].description) {
-            console.log('Creating asset card')
-            let newAsset = new AssetCard(cardData[i].value, cardData[i].description);
-            newAsset.show(document.getElementById("cardContainer"));
-
-            // Get the asset card element that was just added and add click handler
-            let assetElement = document.getElementById("cardContainer").lastElementChild;
-            assetElement.assetInstance = newAsset;
-            assetElement.onclick = () => {
-                assetElement.classList.remove("hidden")
-                assetElement.assetInstance.changeState();
-            };
-        } else {
-            console.log('Card has neither options nor description:', cardData[i])
-        }
-    }
-
-
-    let startBtn = document.createElement("BUTTON");
-    startBtn.classList.add("startBtn");
-    startBtn.textContent = "Start Game";
-    startBtn.onclick = () => {
-        document.getElementById("cardContainer").classList.remove("hidden")
-        timer(cardData.length*2)
-        startBtn.remove()
-    }
-    document.getElementById("title").append(startBtn);
-</script>
+<div id="app">
+    <div id="menu">
+        <h3>Menu</h3>
+        <ul></ul>
+    </div>
+    <article id="main"></article>
+    </div>
+    <script type="module" src="./index.js"></script>
 
 
 

@@ -1,44 +1,33 @@
-export const questions = [
-  {
-    question: "What is the capital of France?",
-    options: ["Berlin", "Madrid", "Paris", "Lisbon"],
-    correctAnswer: "Paris"
-  },
-  {
-    question: "Which planet is known as the Red Planet?",
-    options: ["Venus", "Mars", "Jupiter", "Saturn"],
-    correctAnswer: "Mars"
-  },
-  {
-    question: "How many sides does a hexagon have?",
-    options: ["5", "6", "7", "8"],
-    correctAnswer: "6"
-  },
-  {
-    question: "Who painted the Mona Lisa?",
-    options: ["Michelangelo", "Raphael", "Leonardo da Vinci", "Caravaggio"],
-    correctAnswer: "Leonardo da Vinci"
-  },
-  {
-    question: "What is the largest ocean on Earth?",
-    options: ["Atlantic", "Indian", "Arctic", "Pacific"],
-    correctAnswer: "Pacific"
-  }
+export let hannaMenu = [
+    {
+        name: "Home",
+        iconSrc: "🏠"
+    },
+    {
+        name:"Favorites",
+        iconSrc:"💗"
+    },
+    {
+        name:"Achievements",
+        iconSrc:"🏆"
+    }
 ]
 
 
-
-export const assets = [
-  {
-    value: '<i class="fa-solid fa-gem"></i>',
-    description: "You get an extra star!"
-  },
-  {
-    value: '<i class="fa-solid fa-paw"></i>',
-    description: "A bear takes away a star!"
-  },
-  {
-    value: '<i class="fa-solid fa-circle-xmark" style="color: red;"></i>',
-    description: "Game over!"
-  }
+export let hannaData = [
+    {
+        item:"Home",
+        img: "./images/nwp.jpeg",
+        content: "Grande Prairie is located in northwestern Alberta, it is the heart of the peace region."
+    },
+    {
+        item:"Favorites",
+        img: "./images/eastlink_centre.jpg",
+        content: "Life is all about movement and we want you to come move with us at the Eastlink Center"
+    },
+    {
+        item:"Achievements",
+        img: "./images/achievement.jpeg",
+        content: "An achievement is a great accomplishment-something achieved with great effort or skill."
+    }
 ]
