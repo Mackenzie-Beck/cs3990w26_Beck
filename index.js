@@ -1,6 +1,6 @@
-import {hannaData, hannaMenu} from "./Data.js"
-import { MenuItem } from "./MenuItem.js";
-import {Item} from "./Item.js"
+import {hannaData, hannaMenu} from "Data.js"
+import { MenuItem } from "MenuItem.js";
+import {Item} from "Item.js"
 
 const link = document.createElement('link');
 link.rel = 'stylesheet';
